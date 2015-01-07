@@ -12,7 +12,8 @@ using namespace std;
 //User Libraries
 
 //Global Constants
-const float GRAVITY=32.174;//(ft/sec^2)
+//const float GRAVITY=32.174f;//(ft/sec^2)
+const float GRAVITY=3.2174e1f;//(ft/sec^2)
 
 //Function Prototypes
 
