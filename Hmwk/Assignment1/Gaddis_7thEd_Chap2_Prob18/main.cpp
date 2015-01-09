@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
  * Created on January 8, 2015, 8:15 AM
- * Purpose: Hmwk, Solution to free fall problem
+ * Purpose: 1 of 10 Hmwks due the first week
  */
 
 //System Libraries
