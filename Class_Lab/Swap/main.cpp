@@ -41,4 +41,3 @@ int main(int argc, char** argv) {
     //Exit stage right
     return 0;
 }
-
