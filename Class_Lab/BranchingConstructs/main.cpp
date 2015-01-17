@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     //Illustrate the switch statement
     cout<<"Using the switch statement  ";
     cout<<"The random boolean is ";
-    switch(torf){
+    switch(static_cast<int>(torf)){
         case 1:  cout<<"Odd"<<endl;break;
         default: cout<<"Even"<<endl;
     }
