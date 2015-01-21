@@ -19,15 +19,18 @@ int main(int argc, char** argv) {
     //Declare variables
     unsigned short number;
     //Prompt the user
-    cout<<"Input a number from 1000 to 3000"<<endl;
+    cout<<"Input a number from 0 to 5999"<<endl;
     cin>>number;
     //Determine the number of 1000's
     char thousands=(number-number%1000)/1000;
     //Output the thousands in Roman Numerals
     switch(thousands){
+        case 5: cout<<"W";break;
+        case 4: cout<<"MW";break;
         case 3: cout<<"M";
         case 2: cout<<"M";
-        default:cout<<"M";
+        case 1:cout<<"M";break;
+        default:;
     }
     //Determine the number of 100's
     number-=thousands*1000;
@@ -77,7 +80,7 @@ int main(int argc, char** argv) {
         case 1: cout<<"I";break;
         default:;
     }
-
+    //Exit Stage Left
     return 0;
 }
 
