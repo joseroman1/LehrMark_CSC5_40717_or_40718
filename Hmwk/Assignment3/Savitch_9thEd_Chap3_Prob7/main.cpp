@@ -28,9 +28,9 @@ int main(int argc, char** argv) {\
     cout<<"Input the value of x"<<endl;
     cin>>x;
     //Calculate the approximate e^x
-    for(count=1;term>tol;term*=x/count,approxEx+=term,count++){
-        //term*=x/count;
-        //approxEx+=term;
+    for(count=1;term>tol;count++){
+        term*=x/count;
+        approxEx+=term;
     }
     //Calculate the exact value of e^x
     exactEx=exp(x);
