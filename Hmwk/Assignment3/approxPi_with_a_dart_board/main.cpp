@@ -18,7 +18,7 @@ using namespace std;
 
 //Global Constants
 const float PI=4*atan(1);
-const unsigned int MAXRAND=pow(2,31);
+const unsigned int MAXRAND=pow(2,31)-1;
 
 //Function Prototype
 
@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
     //Play the Game throw the darts
     for(int dart=1;dart<=nDarts;dart++){
         float x=1.0f*rand()/MAXRAND;//(0,1) x coordinate of the dart
-        float y=1.0f*rand()/MAXRAND;//(0,1) x coordinate of the dart
+        float y=1.0f*rand()/MAXRAND;//(0,1) y coordinate of the dart
         if(x*x+y*y<=1)inCircl++;
     }
     //Calculate the approximate value of pi
