@@ -17,30 +17,24 @@ using namespace std;
 //Function Prototype
 int nFactrl(int);//Note:  nFactrl with an elll
 int nFactr1(int);//Note:  nFactr1 with a one
-float approxEx(float);
 
 //Execution begins here!
 int main(int argc, char** argv) {
     //Declare variables
-    float x;
+    float x,approxEx=1;
     //Prompt the user for the power of e^x
     cout<<"What x in e^x would you like to use?"<<endl;
     cin>>x;
+    //Calculate the approximate e^x
+    for(int n=1;n<=13;n++){
+        //approxEx+=(pow(x,n)/nFactrl(n));
+        approxEx+=(pow(x,n)/nFactr1(n));
+    }
     //Compare the results
-    cout<<"Approximate e^x = "<<approxEx(x)<<endl;
+    cout<<"Approximate e^x = "<<approxEx<<endl;
     cout<<"Exact e^x       = "<<exp(x)<<endl;
     //Exit Stage right
     return 0;
-}
-
-float approxEx(float x){
-    //Declare variable
-    float etox=1;
-    //Calculate e^x, Note integer 13! is limit
-    for(int n=1;n<=13;n++){
-        etox+=(pow(x,n)/nFactr1(n));
-    }
-    return etox;
 }
 
 int nFactrl(int n){
