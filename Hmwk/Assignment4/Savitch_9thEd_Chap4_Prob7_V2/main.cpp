@@ -22,25 +22,31 @@ int main(int argc, char** argv) {
     int strHrs,strMins,strIsAm=false;
     int endHrs,endMins,endIsAm=false;
     char ap,dummy;
-    //Prompt for the start time
-    cout<<"Input the Start Time"<<endl;
-    cout<<"The Hour, The Minutes and AM or PM"<<endl;
-    cin>>strHrs>>strMins>>ap>>dummy;
-    if(ap=='A'||ap=='a')strIsAm=true;
-    //Prompt for the end time
-    cout<<"Input the End Time"<<endl;
-    cout<<"The Hour, The Minutes and AM or PM"<<endl;
-    cin>>endHrs>>endMins>>ap>>dummy;
-    if(ap=='A'||ap=='a')endIsAm=true;
-    //Output the results
-    cmpDiff(strHrs,strMins,strIsAm,
-            endHrs,endMins,endIsAm);
+    //Loop for inputs
+    do{
+        //Prompt for the start time
+        cout<<endl<<"Input the Start Time"<<endl;
+        cout<<"The Hour, The Minutes and AM or PM"<<endl;
+        cin>>strHrs>>strMins>>ap>>dummy;
+        if(ap=='A'||ap=='a')strIsAm=true;
+        //Prompt for the end time
+        cout<<endl<<"Input the End Time"<<endl;
+        cout<<"The Hour, The Minutes and AM or PM"<<endl;
+        cin>>endHrs>>endMins>>ap>>dummy;
+        if(ap=='A'||ap=='a')endIsAm=true;
+        //Output the results
+        cmpDiff(strHrs,strMins,strIsAm,
+                endHrs,endMins,endIsAm);
+    }while(strHrs>=0&&strMins>=0&&endHrs>=0&&endMins>=0);
     //Exit Stage Right
     return 0;
 }
 
 void cmpDiff(int strHrs,int strMins,bool strIsAm,
              int endHrs,int endMins,bool endIsAm){
+    //If anything negative exit
+    if(strHrs<0||strMins<0
+            ||endHrs<0||endMins<0) return;
     //Calculate the minutes for each
     if(!strIsAm)strHrs+=12;
     int strTime=strHrs*60+strMins;
@@ -51,7 +57,7 @@ void cmpDiff(int strHrs,int strMins,bool strIsAm,
     int hrs=diffMin/60;
     int min=diffMin-hrs*60;
     //Output the results
-    cout<<"The difference in Time = ";
+    cout<<endl<<"The difference in Time = ";
     cout<<(hrs<10?'0':'\0')<<hrs<<":"
         <<(min<10?'0':'\0')<<min<<endl;
 }
