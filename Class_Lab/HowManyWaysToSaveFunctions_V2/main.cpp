@@ -23,13 +23,17 @@ float save2(float,float,int);
 float save3(float,float,int);
 float save4(float,float,int);
 float save4(float,float,float);//Overloaded function call, i.e. same name
+void  save5(float &,float,float,float);//Reference Variable
+int   save5(float &,float,float,int);//Static Variable
 
 int main(int argc, char** argv) {
     //Declare and initialize values
     float prsVal=100.0f;//$100
     float intRate=6;//% Interest rate per year
     int   nCompnd=72/intRate;//By the of 72 to double
-    float fCompnd=nCompnd;
+    float fCompnd=nCompnd;//Shows overloading from int to float
+    float futrVal;//Reference variable passed into save5
+    int   count;//Count how many times save5 is called
     //Convert interest to a fraction
     intRate/=100;
     //Output the inputs
@@ -53,6 +57,16 @@ int main(int argc, char** argv) {
             <<save4(prsVal,intRate,nCompnd)<<endl;
     cout<<"Our Savings 4 = $"
             <<save4(prsVal,intRate,fCompnd)<<endl;
+    save5(futrVal,prsVal,intRate,fCompnd);
+    cout<<"Our Savings 5 = $"
+            <<futrVal<<endl;
+    for(int i=1;i<=5;i++){
+        count=save5(futrVal,prsVal,intRate,nCompnd);
+    }
+    cout<<"Our Savings 5 using a static = $"
+            <<futrVal<<endl;
+    cout<<"The static variable/function was called "
+            <<count<<" (times)"<<endl;
     //Exit Stage Right!
     return 0;
 }
@@ -90,4 +104,14 @@ float save4(float p,float i,int n){
 float save4(float p,float i,float n){
     if(n<=0)return p;
     return save4(p,i,n-1)*(1+i);
+}
+
+void save5(float &s,float p,float i,float n){
+    s=p*pow(1+i,n);
+}
+
+int save5(float &s,float p,float i,int n){
+    static int nTimCld;
+    s=p*pow(1+i,n);
+    return ++nTimCld;
 }
