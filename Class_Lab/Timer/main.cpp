@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     cout<<"Wait for the next prompt!!!"<<endl;
     do{
         endTim=static_cast<unsigned int>(time(0));  
-    }while(endTim-begTim<5);
+    }while(endTim-begTim<totTim);
     cout<<"Your answer is?"<<endl;
     cin>>ans;
     //Determine if correct

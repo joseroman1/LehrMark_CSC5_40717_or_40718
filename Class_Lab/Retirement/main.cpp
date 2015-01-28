@@ -27,8 +27,8 @@ void  retirement(float &,float,float,float);
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Declare variables
-    float salary=150000.0f;
-    float invRate=0.05f;//http://california.municipalbonds.com/bonds/recent
+    float salary=75000.0f;
+    float invRate=0.0625f;//http://california.municipalbonds.com/bonds/recent
     float defPrct=0.20f;//Babylonian 10
     float ndSave=salary/invRate;
     float retSav=0;
