@@ -15,19 +15,19 @@ using namespace std;
 //Global Constants
 
 //Function Prototypes
-int rollDie(int);
+int rollDie(int,int);
 
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Set random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare variables
-    unsigned int nRolls=36000,nDie=2;
+    unsigned int nRolls=36000,nDie=2,nFace=6;
     int n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12;
     n2=n3=n4=n5=n6=n7=n8=n9=n10=n11=n12=0;
     //Take statistics on the random throws
     for(unsigned int roll=1;roll<=nRolls;roll++){
-        int toss=rollDie(nDie);
+        int toss=rollDie(nDie,nFace);
         switch(toss){
             case 2:n2++;break;
             case 3:n3++;break;
@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
         }
     }
     //As a check
-    int tot=n2+n3+n4+n5+n6+n7+n8+n9+n10+n11+n12;
+    unsigned int tot=n2+n3+n4+n5+n6+n7+n8+n9+n10+n11+n12;
     //Output the stats
     cout<<"2 was rolled "<<n2<<"(times)"<<endl;
     cout<<"3 was rolled "<<n3<<"(times)"<<endl;
@@ -62,11 +62,11 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-int rollDie(int nDice){
+int rollDie(int nDice,int nFace){
     //Declare variables
     int sum=0;
     for(int roll=1;roll<=nDice;roll++){
-        sum+=(rand()%6+1);
+        sum+=(rand()%nFace+1);
     }
     return sum;
 }
