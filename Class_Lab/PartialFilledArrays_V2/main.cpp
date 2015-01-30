@@ -15,14 +15,16 @@ using namespace std;
 //User Libraries
 
 //Global constants
-const int COL=10;
+const int COL=200;
 
 //Function prototypes
 void filAray(int [],int);
 void filAray(vector<int> &,int);
+void filAray1to2(int [],int,int);
 void filAray(int [][COL],int,int);
 void prntAry(const int [],int,int);
 void prntAry(const vector<int> &,int,int);
+void prntAry1to2(const int [],int,int);
 void prntAry(const int [][COL],int,int);
 
 //Execution Begins Here
@@ -30,18 +32,21 @@ int main(int argc, char** argv) {
     //Seed the random number generator
     srand(static_cast<unsigned int>(time(0)));
     //Declare variables and arrays
-    const int ROW=10;
+    const int ROW=200;
     int pFilCol=10,pFilRow=10,perLine=5;
-    int array[COL]={};
-    vector<int> varray(COL,0);
+    int array[COL];
+    vector<int> varray(COL);
+    int array1to2[ROW*COL];
     int array2D[ROW][COL];
     //Fill the Arrays
     filAray(array,pFilCol);
     filAray(varray,pFilCol);
+    filAray1to2(array1to2,pFilRow,pFilCol);
     filAray(array2D,pFilRow,pFilCol);
     //Print the Arrays
     prntAry(array,pFilCol,perLine);
     prntAry(varray,pFilCol,perLine);
+    prntAry1to2(array1to2,pFilRow,pFilCol);
     prntAry(array2D,pFilRow,pFilCol);
     //Exit stage right
     exit(0);
@@ -67,6 +72,18 @@ void prntAry(const int a[],int n,int perLine){
     cout<<endl;
 }
 
+//Print a 1 Dimensional array as if it were 2 Dimensions
+void prntAry1to2(const int a[],int r,int c){
+    cout<<endl;
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            cout<<a[i*COL+j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+}
+
 //Print a 2 Dimensional array
 void prntAry(const int a[][COL],int r,int c){
     cout<<endl;
@@ -77,6 +94,16 @@ void prntAry(const int a[][COL],int r,int c){
         cout<<endl;
     }
     cout<<endl;
+}
+
+//Randomly fill a 1 Dimensional array as if it were 2 Dimensions
+void filAray1to2(int a[],int r,int c){
+    //Where i is the row index and j is the column index
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            a[i*COL+j]=rand()%90+10;
+        }
+    }
 }
 
 //Randomly fill a 2 Dimensional array

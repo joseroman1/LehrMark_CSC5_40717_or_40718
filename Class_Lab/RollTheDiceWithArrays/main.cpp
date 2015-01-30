@@ -22,6 +22,8 @@ int main(int argc, char** argv) {
     //Set random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare variables
+    //unsigned int nRolls=36000,nDie=2,nFace=6;
+    //const int SIZE=13;//Wasted 2 memory positions 0,1
     unsigned int nRolls=2704000,nDie=2,nFace=52;
     const int SIZE=105;//Wasted 2 memory positions 0,1
     int freq[SIZE]={};//Initialized entire array to 0

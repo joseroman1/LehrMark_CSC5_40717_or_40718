@@ -70,8 +70,8 @@ void outStat(int winLoss[][COL],int nGames,int SIZE){
     //Declare Variables
     int totWin=0,totLoss=0,totGame;
     for(int i=0;i<SIZE;i++){
-        totWin+=winLoss[i][0];
-        totLoss+=winLoss[i][1];
+        totWin+=winLoss[i][0];//Wins in column 1 index 0
+        totLoss+=winLoss[i][1];//Loss in column 2 index 1
     }
     totGame=totWin+totLoss;
     //Output the total Stats
