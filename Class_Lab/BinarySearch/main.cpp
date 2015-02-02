@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     //Print the Arrays
     prntAry(array,pFilRow,perLine);
     //Find all the values
-    int val=0;
+    int val=9;
     cout<<"Where is "<<val<<" found in the array!"<<endl;
     int nTimes=fndVals(array,pFilRow,val,found);
     //Print all the values found
@@ -43,10 +43,6 @@ int main(int argc, char** argv) {
     //How many times was the value found
     cout<<val<<" was found "<<nTimes<<"="
         <<cntFnd(array,pFilRow,val)<<" times"<<endl;
-    //Find 0
-    int beg=0,last=pFilRow;
-    cout<<val<<" found at "<<bSearch(beg,array,last,val)<<endl;
-    cout<<"Beg="<<beg<<" Last="<<last<<endl;
     //Exit stage right
     exit(0);
 }
@@ -60,7 +56,7 @@ int fndVals(int a[],int n,int val,int f[]){
         indx=lSearch(pos,a,n,val);
         f[count++]=indx;
         pos=indx+1;
-    }while(indx>0&&indx<n);
+    }while(indx>=0&&indx<n);
     //if(f[count-1]!=-1)f[count]=-1;
     return --count;
 }
@@ -74,7 +70,7 @@ int  cntFnd(const int a[],int n,int val){
         indx=lSearch(pos,a,n,val);
         pos=indx+1;
         count++;
-    }while(indx>0&&indx<n);
+    }while(indx>=0&&indx<n);
     return --count;
 }
 

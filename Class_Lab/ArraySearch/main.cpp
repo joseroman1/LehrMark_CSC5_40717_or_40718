@@ -58,7 +58,7 @@ int fndVals(int a[],int n,int val,int f[]){
         indx=lSearch(pos,a,n,val);
         f[count++]=indx;
         pos=indx+1;
-    }while(indx>0&&indx<n);
+    }while(indx>=0&&indx<n);
     return --count;
 }
 
@@ -70,7 +70,7 @@ int  cntFnd(const int a[],int n,int val){
         indx=lSearch(pos,a,n,val);
         pos=indx+1;
         count++;
-    }while(indx>0&&indx<n);
+    }while(indx>=0&&indx<n);
     return --count;
 }
 
