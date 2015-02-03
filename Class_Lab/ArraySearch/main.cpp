@@ -9,7 +9,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <vector>
 using namespace std;
 
 //User Libraries
@@ -38,7 +37,7 @@ int main(int argc, char** argv) {
     //Print the Arrays
     prntAry(array,pFilRow,perLine);
     //Find all the values
-    int val=10;
+    int val=50;
     cout<<"Where is "<<val<<" found in the array!"<<endl;
     int nTimes=fndVals(array,pFilRow,val,found);
     //Print all the values found

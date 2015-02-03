@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     //Print the Arrays
     prntAry(array,pFilRow,perLine);
     //Find all the values
-    int val=9;
+    int val=0;
     cout<<"Where is "<<val<<" found in the array!"<<endl;
     int nTimes=fndVals(array,pFilRow,val,found);
     //Print all the values found
