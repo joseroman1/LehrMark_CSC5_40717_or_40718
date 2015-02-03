@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
  * Created on Feb 3, 2015, 10:10 AM
- *      Purpose:  Developing the bubble sort
+ *      Purpose:  Developing the selection sort
  */
 
 //System Libraries
@@ -19,8 +19,9 @@ using namespace std;
 void filAray(int [],int);
 void prntAry(const int [],int,int);
 void swap(int &,int &);//With xor's
-void bblSort(int [],int);//With a swap function
-void bublSrt(int [],int);//Without a swap function
+int  minLst(int,int [],int);//Find minimum in the list
+void selSort(int [],int);//With a swap function
+void selcSrt(int [],int);//Without functions
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -34,46 +35,53 @@ int main(int argc, char** argv) {
     filAray(array,pFilRow);
     //Print the Arrays
     prntAry(array,pFilRow,perLine);
-    //Sort using Bubble Sort
-    bublSrt(array,pFilRow);
+    //Sort using Selection Sort
+    selcSrt(array,pFilRow);
     //Print the sorted array
     prntAry(array,pFilRow,perLine);
     //Exit stage right
     exit(0);
 }
 
-void bublSrt(int a[],int n){
-    //Declare a swap variable
-    bool bSwap;
-    //Do while swapping has occurred
-    do{
-        bSwap=false;
-        //Swap as we go down the list
-        for(int i=0;i<n-1;i++){
-            if(a[i]>a[i+1]){
-                int temp=a[i];
-                a[i]=a[i+1];
-                a[i+1]=temp;
-                bSwap=true;
+void selcSrt(int a[],int n){
+    //Swap as we go down the list
+    for(int i=0;i<n-1;i++){
+        //Declare and set the minimum
+        int min=a[i],indx=i;
+        //Loop and find the minimum in the list
+        for(int j=i+1;j<n;j++){
+            if(a[j]<min){
+                min=a[j];
+                indx=j;
             }
         }
-    }while(bSwap);
+        if(i!=indx){
+            int temp=a[i];
+            a[i]=a[indx];
+            a[indx]=temp;
+        }
+    }
 }
 
-void bblSort(int a[],int n){
-    //Declare a swap variable
-    bool bSwap;
-    //Do while swapping has occurred
-    do{
-        bSwap=false;
-        //Swap as we go down the list
-        for(int i=0;i<n-1;i++){
-            if(a[i]>a[i+1]){
-                swap(a[i],a[i+1]);
-                bSwap=true;
-            }
+void selSort(int a[],int n){
+    //Swap as we go down the list
+    for(int i=0;i<n-1;i++){
+        int indx=minLst(i,a,n);
+        if(i!=indx)swap(a[i],a[indx]);
+    }
+}
+
+int  minLst(int pos,int a[],int n){
+    //Declare and set the minimum
+    int min=a[pos],indx=pos;
+    //Loop and find the minimum in the list
+    for(int i=pos+1;i<n;i++){
+        if(a[i]<min){
+            min=a[i];
+            indx=i;
         }
-    }while(bSwap);
+    }
+    return indx;
 }
 
 void swap(int &a,int &b){
