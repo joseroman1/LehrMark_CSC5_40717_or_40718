@@ -122,9 +122,11 @@ void selSrtB(int a[],int n){
     //Swap as we go down the list
     for(int i=0,j=n-1;i<j;i++,j--){
         //Declare and set the minimum
-        int min=a[i],indmn=i, indmx=i,max=min;
+        int min,indmn,indmx,max;
+        indmn=indmx=i;
+        min=max=a[i];
         //Loop and find the minimum in the list
-        for(int k=i+1;k<j;k++){
+        for(int k=i+1;k<j+1;k++){
             if(a[k]<min){
                 min=a[k];
                 indmn=k;
@@ -139,6 +141,7 @@ void selSrtB(int a[],int n){
             a[i]=a[indmn];
             a[indmn]=temp;
         }
+        if(i==indmx)indmx=indmn;
         if(j!=indmx){
             int temp=a[j];
             a[j]=a[indmx];
