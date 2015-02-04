@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=arraysearch
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/arraysearch
+CND_ARTIFACT_NAME_Debug=linearsearch_v2_vectorreturn
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/linearsearch_v2_vectorreturn
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=arraysearch.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/arraysearch.tar
+CND_PACKAGE_NAME_Debug=linearsearchv2vectorreturn.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/linearsearchv2vectorreturn.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=arraysearch
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/arraysearch
+CND_ARTIFACT_NAME_Release=linearsearch_v2_vectorreturn
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/linearsearch_v2_vectorreturn
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=arraysearch.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/arraysearch.tar
+CND_PACKAGE_NAME_Release=linearsearchv2vectorreturn.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/linearsearchv2vectorreturn.tar
 #
 # include compiler specific variables
 #

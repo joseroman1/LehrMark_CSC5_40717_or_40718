@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
- * Created on January 29, 2015, 9:16 AM
- *      Purpose:  Utilizing partially filled arrays
+ * Created on Feb 2nd, 2015, 9:16 AM
+ *      Purpose:  Linear Search
  */
 
 //System Libraries
@@ -18,10 +18,10 @@ using namespace std;
 //Function prototypes
 void filAray(int [],int);
 void prntAry(const int [],int,int);
-int  lSearch(int,const int [],int,int);
-int  fndVals(int [],int,int,int[]);
-void prntFnd(const int [],int,int);
-int  cntFnd(const int [],int,int);
+int  lSearch(int,const int [],int,int);//Linear Search
+int  fndVals(int [],int,int,int[]);//Fill Array with all value positions found
+void prntFnd(const int [],int,int);//Print the found array
+int  cntFnd(const int [],int,int);//Count the number of values found in the array
 
 //Execution Begins Here
 int main(int argc, char** argv) {

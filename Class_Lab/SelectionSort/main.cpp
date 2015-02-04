@@ -37,6 +37,7 @@ int main(int argc, char** argv) {
     prntAry(array,pFilRow,perLine);
     //Sort using Selection Sort
     selcSrt(array,pFilRow);
+    //selSort(array,pFilRow);
     //Print the sorted array
     prntAry(array,pFilRow,perLine);
     //Exit stage right

@@ -21,7 +21,7 @@ void prntAry(const int [],int,int);
 void copy(int [],int [],int);
 void selcSrt(int [],int);//Selection Sort without Functions
 void bublSrt(int [],int);//Bubble Sort without Functions
-void markSrt(int a[],int n);//Mark Sort without Functions
+void markSrt(int [],int);//Mark Sort without Functions
 
 //Execution Begins Here
 int main(int argc, char** argv) {

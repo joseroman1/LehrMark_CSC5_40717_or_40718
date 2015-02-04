@@ -28,14 +28,15 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int>(time(0)));
     //Declare variables and arrays
     const int ROW=100000;
-    int pFilRow=100000,perLine=10;
+    int pFilRow=100,perLine=10;
     int array[ROW]={};
     //Fill the Arrays
     filAray(array,pFilRow);
     //Print the Arrays
     prntAry(array,pFilRow,perLine);
     //Sort using Bubble Sort
-    bublSrt(array,pFilRow);
+    //bublSrt(array,pFilRow);//Without Swap function
+    bblSort(array,pFilRow);//With Swap function
     //Print the sorted array
     prntAry(array,pFilRow,perLine);
     //Exit stage right

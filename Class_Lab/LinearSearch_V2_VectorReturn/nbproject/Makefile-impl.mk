@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ArraySearch
+PROJECTNAME=LinearSearch_V2_VectorReturn
 
 # Active Configuration
 DEFAULTCONF=Debug
