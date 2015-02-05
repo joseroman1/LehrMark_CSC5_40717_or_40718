@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=gameoflife
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/gameoflife
+CND_ARTIFACT_NAME_Debug=marksort_v2_indexsort
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/marksort_v2_indexsort
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=gameoflife.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/gameoflife.tar
+CND_PACKAGE_NAME_Debug=marksortv2indexsort.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/marksortv2indexsort.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=gameoflife
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/gameoflife
+CND_ARTIFACT_NAME_Release=marksort_v2_indexsort
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/marksort_v2_indexsort
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=gameoflife.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/gameoflife.tar
+CND_PACKAGE_NAME_Release=marksortv2indexsort.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/marksortv2indexsort.tar
 #
 # include compiler specific variables
 #

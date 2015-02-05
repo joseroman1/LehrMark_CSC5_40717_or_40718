@@ -146,4 +146,3 @@ void filAray(char a[][COL],int ROW,char d){
         }
     }
 }
-
