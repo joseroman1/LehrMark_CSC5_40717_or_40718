@@ -20,11 +20,11 @@ using namespace std;
 int *filAray(int);
 void prntAry(int [],int,int);
 int * markSrt(int *,int);
-void swap(int [],int *);
+void swap(int *,int *);
 void swap(int &,int &);
 void destroy(int *);
 
-int main(int argc, char** argv) {
+int main(int argc, char* argv[]) {
     //Initialize the random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare and initialize our array
@@ -49,7 +49,8 @@ int * markSrt(int *a,int n){
     int *b=new int[n];
     //Copy the information
     for(int i=0;i<n;i++){
-        *(b+i)=a[i];
+        //*(b+i)=a[i];
+        b[i]=*(a+i);
     }
     //Sort the array
     for(int pos=0;pos<n-1;pos++){
@@ -91,6 +92,7 @@ int *filAray(int n){
     //Fill with random numbers
     for(int i=0;i<n;i++){
         *(a+i)=rand()%90+10;
+        //a[i]=rand()%90+10;
     }
     return a;
 }

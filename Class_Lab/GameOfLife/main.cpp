@@ -30,13 +30,14 @@ int main(int argc, char** argv) {
     char array[ROW][COL]={};
     char brray[ROW][COL]={};
     int nGen=20;
+    char d='*',nd='X';
     //Fill the array
-    filAray(array,ROW,'*');
-    filAray(brray,ROW,'*');
+    filAray(array,ROW,d);
+    filAray(brray,ROW,d);
     //Print the array without the glider
     prntAry(array,ROW);
     //Inject the glider
-    inject(array,1,10,'X');
+    inject(array,1,10,nd);
     //Print the array with the glider
     prntAry(array,ROW);
     pause(1);
@@ -45,10 +46,10 @@ int main(int argc, char** argv) {
         //prntMap(array,ROW,'X');
         cout<<"Gen "<<gen<<endl;
         if(gen%2){
-            gnrashn(array,brray,ROW,'*','X');
+            gnrashn(array,brray,ROW,d,nd);
             prntAry(brray,ROW);
         }else{
-            gnrashn(brray,array,ROW,'*','X');
+            gnrashn(brray,array,ROW,d,nd);
             prntAry(array,ROW);
         }
         //prntMap(array,ROW,'X');
